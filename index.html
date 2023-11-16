@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Customer Management</title>
+</head>
+<body>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Login</h2>
+    <label for="loginId">Username:</label>
+    <input type="text" id="loginId" placeholder="Enter your username">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password">
+
+    <button onclick="authenticateUser()">Login</button>
+  </div>
+</div>
+
+<!-- Customer List -->
+<div id="customerList" class="customer-list">
+  <h2>Customer List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody id="customerTableBody"></tbody>
+  </table>
+</div>
+
+<!-- Add Customer Form -->
+<div id="addCustomerForm" class="customer-form">
+  <h2>Add New Customer</h2>
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" placeholder="Enter first name">
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" placeholder="Enter last name">
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" placeholder="Enter email">
+
+  <label for="phone">Phone:</label>
+  <input type="tel" id="phone" placeholder="Enter phone number">
+
+  <button  id="addCustomerButton" onclick="addCustomer()">Add Customer</button>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>
